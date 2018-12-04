@@ -16,3 +16,9 @@ pub fn read_file_i32(filename: &str) -> Vec<i32> {
         .map(|l| l.unwrap().parse::<i32>().unwrap())
         .collect()
 }
+
+pub fn read_file_string(filename: &str) -> Vec<String> {
+    read_file(filename).unwrap()
+        .map(|l| l.unwrap())
+        .collect()
+}
